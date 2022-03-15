@@ -1,0 +1,24 @@
+note over selain:
+SPA sivulle meneminen ei vaiheiltaan eroa
+perinteisestä sivusta
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+palvelin-->selain: HTML-koodi
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: main.css
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+palvelin-->selain: spa.js
+
+note over selain:
+selain alkaa suorittaa JavaScript-koodia,
+joka pyytää JSON-datan palvelimelta
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin-->selain: [{"content":"vcxbxcvzzzz","date":"2022-03-15T13:44:47.210Z"}, ...]
+
+note over selain:
+selain suorittaa tapahtumankäsittelijän,
+joka renderöi muistiinpanot näytölle
+end note

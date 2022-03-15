@@ -1,0 +1,16 @@
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over selain:
+lähettämisen hoitaa selaimen lataamassa 
+JavaScript-tiedostossa määritelty koodi,
+joka estää lomakkeen lähettämisen ja
+sivun uudelleen lataamisen
+end note
+
+selain-->palvelin: {content: "Loputon suo", date: "2022-03-15T18:27:00.540Z"}
+
+note over selain:
+JavaScript-koodi luo muistiinpanon, lisää sen 
+listalle komennolla, piirtää  listan uudelleen 
+ja lähettää uuden muistiinpanon palvelimelle
+end note
